@@ -1,70 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/cdn.min.js" defer></script>
-    <title>Bartender Portfolio</title>
+    <title>Thawatchai K. - Bartender Portfolio</title>
+    <!-- โหลด Tailwind CSS สำหรับการจัดสไตล์ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ปรับแต่งสีของแถบเลื่อนและสีเวลาคลุมดำข้อความ */
+        ::selection {
+            background-color: #d97706; /* สีเหลืองอำพัน */
+            color: white;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        /* คลาสสำหรับทำแอนิเมชันเวลาเลื่อนหน้าจอ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-neutral-950 text-neutral-200 antialiased">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                    <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"
-                    >
-                        <span class="sr-only">Open main menu</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-xl font-bold">Bartender Portfolio</h1>
-                    </div>
-                </div>
+    <!-- แถบนำทาง (Navbar) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <span class="text-2xl font-bold tracking-widest text-amber-500 uppercase">TK.</span>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+                <a href="#cover" class="hover:text-amber-500 transition-colors duration-300">Cover</a>
+                <a href="#video" class="hover:text-amber-500 transition-colors duration-300">Video</a>
+                <a href="#cocktails" class="hover:text-amber-500 transition-colors duration-300">Cocktails</a>
             </div>
         </div>
     </nav>
 
-    <!-- Cover Section -->
-    <section class="bg-cover bg-center h-96" style="background-image: url('cover-image-url.jpg');">
-        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-            <h2 class="text-white text-4xl">Welcome to My Bartender Portfolio</h2>
+    <!-- หน้า 1: ปก (Cover Section) -->
+    <section id="cover" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12">
+        <div class="absolute inset-0 z-0">
+            <!-- รูปภาพพื้นหลัง -->
+            <img 
+                src="https://images.unsplash.com/photo-1574096079513-d8259312b78a?auto=format&fit=crop&w=1920&q=80" 
+                alt="Bartender working" 
+                class="w-full h-full object-cover opacity-30"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/50 via-neutral-950/80 to-neutral-950"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 flex flex-col items-center reveal active">
+            <!-- ไอคอนแก้ว (Inline SVG) -->
+            <svg class="text-amber-500 mb-6 opacity-80" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.2 22H8.8a2 2 0 0 1-2-1.79L5 3h14l-1.81 17.21A2 2 0 0 1 15.2 22Z"/>
+                <path d="M6 12h12"/>
+            </svg>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight text-white">
+                Thawatchai <span class="text-amber-500">K.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-neutral-400 font-light tracking-wide uppercase mb-8">
+                Aspiring Bartender
+            </p>
+            
+            <!-- ย่อหน้าแนะนำตัว -->
+            <p class="max-w-3xl text-neutral-300 text-base md:text-lg leading-relaxed mb-12 font-light border-l-2 border-amber-500 pl-6 text-left md:text-center md:border-l-0 md:border-t-2 md:pt-6 md:pl-0">
+                My name is Game. I am an aspiring bartender with professional training from the Department of Skill Development. I have experience as a bartender intern in the Food & Beverage department, where I learned cocktail preparation, bar operations, and guest service. I am passionate about mixology and committed to continuously improving my bartending skills.
+            </p>
+
+            <!-- ภาพแนะนำตัวที่บาร์ (นำฟิลเตอร์ขาวดำออก และปรับให้แสดงภาพเต็มไม่โดนตัด) -->
+            <div class="mb-16 flex flex-col items-center w-full px-4">
+                <div class="relative p-2 bg-neutral-900 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer inline-block max-w-3xl w-full">
+                    <img 
+                        src="intro.jpg" 
+                        alt="Thawatchai at The Sanctuary Resort Pattaya" 
+                        class="w-full h-auto rounded-sm transition-all duration-700" 
+                    />
+                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-max max-w-[90%] text-center bg-amber-500 text-neutral-950 text-xs md:text-sm font-bold uppercase tracking-widest py-2 px-6 shadow-lg group-hover:bg-amber-400 transition-colors duration-300">
+                        At The Sanctuary Resort Pattaya
+                    </div>
+                </div>
+            </div>
+
+            <a href="#video" class="animate-bounce p-2 rounded-full border border-neutral-700 hover:border-amber-500 hover:text-amber-500 transition-colors">
+                <!-- ไอคอนลูกศรชี้ลง -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section class="my-10">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl font-semibold text-center">Cocktail Mixing Tutorials</h2>
-            <div class="flex justify-center">
-                <iframe class="w-full md:w-1/2 h-64" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- หน้า 3: วิดีโอ (Video Section) -->
+    <section id="video" class="py-24 md:py-32 bg-neutral-900 min-h-[80vh] flex items-center border-y border-neutral-800">
+        <div class="container mx-auto px-6 max-w-5xl text-center reveal">
+            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Bartending at the Bar</h2>
+            <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">Watch me in action</p>
+            
+            <div class="flex items-center justify-center w-full">
+                <!-- เครื่องเล่นวิดีโอ HTML5 ปรับให้พอดีกับหน้าจอทั้งมือถือและคอม จำกัดความสูงไว้ที่ 70vh -->
+                <video 
+                    src="bartending.mp4" 
+                    controls 
+                    class="w-full max-w-3xl max-h-[70vh] object-contain bg-black border border-neutral-800 rounded-sm shadow-2xl"
+                >
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
 
-    <!-- Cocktails Grid -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto my-10">
-        <div class="p-4 bg-white rounded-lg shadow">
-            <h3 class="font-bold text-lg">Cocktail Name</h3>
-            <p>Description of the cocktail.</p>
+    <!-- หน้า 4: ค็อกเทล (Cocktails) - อักษรชิดมุมซ้ายล่างสุด -->
+    <section id="cocktails" class="py-32 bg-neutral-950">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col items-center mb-20 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Sample Cocktails I Have Prepared </h2>
+                <div class="h-[2px] bg-amber-500 w-24"></div>
+            </div>
+            
+            <!-- ตารางแสดงค็อกเทล -->
+            <div id="cocktail-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ข้อมูลจะถูกดึงมาใส่ตรงนี้ -->
+            </div>
         </div>
-        <!-- Repeat cocktail cards as needed -->
     </section>
 
-    <!-- JavaScript for animations -->
-    <script>
-        // Add your JavaScript animations here
-        document.addEventListener('DOMContentLoaded', function() {
-            // Example animation
-            console.log('Welcome to the Bartender Portfolio!');
-        });
-    </script>
+    <!-- ส่วนท้าย (Footer) -->
+    <footer class="py-12 bg-black text-center text-neutral-600 text-sm border-t border-neutral-900">
+        <p class="tracking-widest uppercase">&copy; <span id="year"></span> Thawatchai Kotemanee. All rights reserved.</p>
+    </footer>
 
+    <!-- สคริปต์การทำงานและข้อมูล JSON -->
+    <script>
+        // กำหนดปีปัจจุบันที่ Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // เอฟเฟกต์เวลาเลื่อนหน้าจอสำหรับ Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // ฟังก์ชันแอนิเมชันเปิดตัวเวลาเลื่อนหน้าจอ (Scroll Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // เรียกใช้ฟังก์ชันทันทีเพื่อแสดงส่วนแรก
+        reveal();
+
+        // ข้อมูลค็อกเทลในรูปแบบ JSON (ดึงภาพจากไฟล์ local ตามชื่อ)
+        const cocktailDataJSON = `
+        {
+            "cocktails": [
+                { "name": "Mojito", "image": "mojito.jpg" },
+                { "name": "Blue Hawaii", "image": "blue_hawaii.jpg" },
+                { "name": "Piña Colada", "image": "pina_colada.jpg" },
+                { "name": "Long Island Iced Tea", "image": "long_island.jpg" },
+                { "name": "Aperol Spritz", "image": "aperol_spritz.jpg" },
+                { "name": "Mai Tai", "image": "mai_tai.jpg" }
+            ]
+        }
+        `;
+
+        // สร้างและแสดงผลค็อกเทลบนหน้าเว็บ (ตัวหนังสือชิดมุมซ้ายล่างสุด)
+        const data = JSON.parse(cocktailDataJSON);
+        const cocktailGrid = document.getElementById('cocktail-grid');
+        let html = '';
+        
+        data.cocktails.forEach((drink, index) => {
+            let delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-100' : 'delay-200';
+            
+            html += `
+                <div class="bg-neutral-900 border border-neutral-800 rounded-sm overflow-hidden hover:border-amber-500 transition-colors duration-500 group reveal ${delayClass}">
+                    <div class="relative w-full flex bg-black items-center justify-center">
+                        <!-- รูปภาพ: เปลี่ยนเป็น w-full h-auto เพื่อแสดงภาพเต็มโดยไม่ครอป -->
+                        <img src="${drink.image}" alt="${drink.name}" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                        
+                        <!-- เงาดำไล่ระดับเข้มๆ จากข้างล่างขึ้นมา เพื่อให้อ่านตัวอักษรสีขาวได้ชัดขึ้น -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
+                        
+                        <!-- ชื่อค็อกเทล ติดขอบซ้ายล่างสุดขีด (bottom-0 left-0, m-0, p-0, leading-none) -->
+                        <h3 class="absolute bottom-0 left-0 z-10 m-0 p-0 leading-none text-xl md:text-2xl font-bold text-white tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-amber-500 transition-colors duration-300 pointer-events-none">
+                            ${drink.name}
+                        </h3>
+                    </div>
+                </div>
+            `;
+        });
+        cocktailGrid.innerHTML = html;
+
+    </script>
 </body>
 </html>
