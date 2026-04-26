@@ -36,6 +36,7 @@
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
                 <a href="#cover" class="hover:text-amber-500 transition-colors duration-300">Cover</a>
                 <a href="#video" class="hover:text-amber-500 transition-colors duration-300">Video</a>
+                <a href="#iba-project" class="hover:text-amber-500 transition-colors duration-300">IBA Quiz</a>
                 <a href="#cocktails" class="hover:text-amber-500 transition-colors duration-300">Cocktails</a>
             </div>
         </div>
@@ -71,7 +72,7 @@
                 My name is Game. I am an aspiring bartender with professional training from the Department of Skill Development. I have experience as a bartender intern in the Food & Beverage department, where I learned cocktail preparation, bar operations, and guest service. I am passionate about mixology and committed to continuously improving my bartending skills.
             </p>
 
-            <!-- ภาพแนะนำตัวที่บาร์ (นำฟิลเตอร์ขาวดำออก และปรับให้แสดงภาพเต็มไม่โดนตัด) -->
+            <!-- ภาพแนะนำตัวที่บาร์ -->
             <div class="mb-16 flex flex-col items-center w-full px-4">
                 <div class="relative p-2 bg-neutral-900 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer inline-block max-w-3xl w-full">
                     <img 
@@ -92,12 +93,370 @@
         </div>
     </section>
 
-    <!-- หน้า 3: วิดีโอ (Video Section) -->
-    <section id="video" class="py-24 md:py-32 bg-neutral-900 min-h-[80vh] flex items-center border-y border-neutral-800">
+    <!-- หน้า 3: วิดีโอ 1 (Video Section 1) -->
+    <section id="video" class="py-24 md:py-32 bg-neutral-900 min-h-[80vh] flex items-center border-t border-neutral-800">
         <div class="container mx-auto px-6 max-w-5xl text-center reveal">
             <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Bartending at the Bar</h2>
             <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">Watch me in action</p>
             
+            <div class="flex items-center justify-center w-full">
+                <!-- เครื่องเล่นวิดีโอ HTML5 -->
+                <video 
+                    src="bartending.mp4" 
+                    controls 
+                    class="w-full max-w-3xl max-h-[70vh] object-contain bg-black border border-neutral-800 rounded-sm shadow-2xl"
+                >
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- หน้า 3.5: วิดีโอ 2 (Video Section 2) -->
+    <section id="video-wyndham" class="py-24 md:py-32 bg-neutral-950 min-h-[80vh] flex items-center border-y border-neutral-800">
+        <div class="container mx-auto px-6 max-w-5xl text-center reveal">
+            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Bartending at Wyndham Jomtien Pattaya</h2>
+            <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">Professional Experience</p>
+            
+            <div class="flex items-center justify-center w-full">
+                <!-- เครื่องเล่นวิดีโอ HTML5 -->
+                <video 
+                    src="Wyndham.mp4" 
+                    controls 
+                    class="w-full max-w-3xl max-h-[70vh] object-contain bg-black border border-neutral-800 rounded-sm shadow-2xl"
+                >
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- หน้า 3.75: โปรเจกต์ส่วนตัว (IBA Quiz Project) -->
+    <section id="iba-project" class="py-24 md:py-32 bg-neutral-900 border-b border-neutral-800">
+        <div class="container mx-auto px-6 max-w-6xl reveal">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- ส่วนข้อความอธิบาย -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">IBA Official Cocktails Quiz</h2>
+                    <p class="text-amber-500 mb-6 tracking-widest text-sm uppercase">Interactive Web Application</p>
+                    <p class="text-neutral-300 text-base md:text-lg leading-relaxed mb-6 font-light">
+                        To ensure precision and mastery of international mixology standards, I developed an interactive web application dedicated to the 74 official IBA cocktails. This project features a comprehensive quiz system designed to test and reinforce knowledge of exact ingredients, measurements, and preparation methods. It reflects my commitment to continuous learning and upholding the highest professional standards in bartending.
+                    </p>
+                    <!-- ข้อความลิงก์แทน (Text Link) -->
+                    <div class="mt-4 p-4 border border-neutral-800 bg-neutral-950/50 inline-block text-left w-full md:w-auto">
+                        <span class="text-neutral-500 text-xs uppercase tracking-widest block mb-1">Project Link:</span>
+                        <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 hover:underline underline-offset-4 transition-all duration-300 text-sm md:text-base break-all font-semibold">
+                            https://ibacocktailsbygame.netlify.app/
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ส่วนรูปภาพ Mockup เว็บไซต์ (ทำเป็น Grid 3 รูป เปลี่ยนเป็น .png) -->
+                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+                    <!-- รูปที่ 1 (ใหญ่สุด อยู่ด้านบน) -->
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="col-span-2 relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                        <img 
+                            src="shot1.png" 
+                            alt="IBA Quiz Screenshot 1" 
+                            class="w-full h-auto object-cover rounded-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                        />
+                        <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
+                    </a>
+                    
+                    <!-- รูปที่ 2 (ซ้ายล่าง) -->
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                        <img 
+                            src="shot2.png" 
+                            alt="IBA Quiz Screenshot 2" 
+                            class="w-full h-auto object-cover rounded-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                        />
+                        <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
+                    </a>
+
+                    <!-- รูปที่ 3 (ขวาล่าง) -->
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                        <img 
+                            src="shot3.png" 
+                            alt="IBA Quiz Screenshot 3" 
+                            class="w-full h-auto object-cover rounded-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                        />
+                        <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- หน้า 4: ค็อกเทล (Cocktails) -->
+    <section id="cocktails" class="py-32 bg-neutral-950">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col items-center mb-20 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Sample Cocktails I Have Prepared</h2>
+                <div class="h-[2px] bg-amber-500 w-24"></div>
+            </div>
+            
+            <!-- ตารางแสดงค็อกเทล -->
+            <div id="cocktail-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ข้อมูลจะถูกดึงมาใส่ตรงนี้ -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer class="py-12 bg-black text-center text-neutral-600 text-sm border-t border-neutral-900">
+        <p class="tracking-widest uppercase">&copy; <span id="year"></span> Thawatchai Kotemanee. All rights reserved.</p>
+    </footer>
+
+    <!-- สคริปต์การทำงานและข้อมูล JSON -->
+    <script>
+        // กำหนดปีปัจจุบันที่ Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // เอฟเฟกต์เวลาเลื่อนหน้าจอสำหรับ Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // ฟังก์ชันแอนิเมชันเปิดตัวเวลาเลื่อนหน้าจอ (Scroll Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // เรียกใช้ฟังก์ชันทันทีเพื่อแสดงส่วนแรก
+        reveal();
+
+        // ข้อมูลค็อกเทลในรูปแบบ JSON
+        const cocktailDataJSON = `
+        {
+            "cocktails": [
+                { "name": "Mojito", "image": "mojito.jpg" },
+                { "name": "Blue Hawaii", "image": "blue_hawaii.jpg" },
+                { "name": "Piña Colada", "image": "pina_colada.jpg" },
+                { "name": "Long Island Iced Tea", "image": "long_island.jpg" },
+                { "name": "Aperol Spritz", "image": "aperol_spritz.jpg" },
+                { "name": "Mai Tai", "image": "mai_tai.jpg" }
+            ]
+        }
+        `;
+
+        // สร้างและแสดงผลค็อกเทลบนหน้าเว็บ
+        const data = JSON.parse(cocktailDataJSON);
+        const cocktailGrid = document.getElementById('cocktail-grid');
+        let html = '';
+        
+        data.cocktails.forEach((drink, index) => {
+            let delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-100' : 'delay-200';
+            
+            html += `
+                <div class="bg-neutral-900 border border-neutral-800 rounded-sm overflow-hidden hover:border-amber-500 transition-colors duration-500 group reveal ${delayClass}">
+                    <div class="relative w-full flex bg-black items-center justify-center">
+                        <img src="${drink.image}" alt="${drink.name}" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
+                        
+                        <h3 class="absolute bottom-0 left-0 z-10 m-0 p-0 leading-none text-xl md:text-2xl font-bold text-white tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-amber-500 transition-colors duration-300 pointer-events-none">
+                            ${drink.name}
+                        </h3>
+                    </div>
+                </div>
+            `;
+        });
+        cocktailGrid.innerHTML = html;
+
+    </script>
+</body>
+</html>
+
+
+```
+
+    <!-- หน้า 3.5: วิดีโอ 2 (Video Section 2) -->
+    <section id="video-wyndham" class="py-24 md:py-32 bg-neutral-950 min-h-[80vh] flex items-center border-y border-neutral-800">
+        <div class="container mx-auto px-6 max-w-5xl text-center reveal">
+            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Bartending at Wyndham Jomtien Pattaya</h2>
+            <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">Professional Experience</p>
+            
+            <div class="flex items-center justify-center w-full">
+                <!-- เครื่องเล่นวิดีโอ HTML5 -->
+                <video 
+                    src="Wyndham.mp4" 
+                    controls 
+                    class="w-full max-w-3xl max-h-[70vh] object-contain bg-black border border-neutral-800 rounded-sm shadow-2xl"
+                >
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- หน้า 3.75: โปรเจกต์ส่วนตัว (IBA Quiz Project) -->
+    <section id="iba-project" class="py-24 md:py-32 bg-neutral-900 border-b border-neutral-800">
+        <div class="container mx-auto px-6 max-w-6xl reveal">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- ส่วนข้อความอธิบาย -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">IBA Official Cocktails Quiz</h2>
+                    <p class="text-amber-500 mb-6 tracking-widest text-sm uppercase">Interactive Web Application</p>
+                    <p class="text-neutral-300 text-base md:text-lg leading-relaxed mb-6 font-light">
+                        To ensure precision and mastery of international mixology standards, I developed an interactive web application dedicated to the 74 official IBA cocktails. This project features a comprehensive quiz system designed to test and reinforce knowledge of exact ingredients, measurements, and preparation methods. It reflects my commitment to continuous learning and upholding the highest professional standards in bartending.
+                    </p>
+                    <!-- ข้อความลิงก์แทน (Text Link) -->
+                    <div class="mt-4 p-4 border border-neutral-800 bg-neutral-950/50 inline-block text-left w-full md:w-auto">
+                        <span class="text-neutral-500 text-xs uppercase tracking-widest block mb-1">Project Link:</span>
+                        <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 hover:underline underline-offset-4 transition-all duration-300 text-sm md:text-base break-all font-semibold">
+                            https://ibacocktailsbygame.netlify.app/
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ส่วนรูปภาพ Mockup เว็บไซต์ (ทำเป็น Grid 3 รูป เปลี่ยนเป็น .png) -->
+                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+                    <!-- รูปที่ 1 (ใหญ่สุด อยู่ด้านบน) -->
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="col-span-2 relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                        <img 
+                            src="shot1.png" 
+                            alt="IBA Quiz Screenshot 1" 
+                            class="w-full h-auto object-cover rounded-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                        />
+                        <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
+                    </a>
+                    
+                    <!-- รูปที่ 2 (ซ้ายล่าง) -->
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                        <img 
+                            src="shot2.png" 
+                            alt="IBA Quiz Screenshot 2" 
+                            class="w-full h-auto object-cover rounded-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                        />
+                        <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
+                    </a>
+
+                    <!-- รูปที่ 3 (ขวาล่าง) -->
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                        <img 
+                            src="shot3.png" 
+                            alt="IBA Quiz Screenshot 3" 
+                            class="w-full h-auto object-cover rounded-sm opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                        />
+                        <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- หน้า 4: ค็อกเทล (Cocktails) -->
+    <section id="cocktails" class="py-32 bg-neutral-950">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col items-center mb-20 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Sample Cocktails I Have Prepared</h2>
+                <div class="h-[2px] bg-amber-500 w-24"></div>
+            </div>
+            
+            <!-- ตารางแสดงค็อกเทล -->
+            <div id="cocktail-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ข้อมูลจะถูกดึงมาใส่ตรงนี้ -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer class="py-12 bg-black text-center text-neutral-600 text-sm border-t border-neutral-900">
+        <p class="tracking-widest uppercase">&copy; <span id="year"></span> Thawatchai Kotemanee. All rights reserved.</p>
+    </footer>
+
+    <!-- สคริปต์การทำงานและข้อมูล JSON -->
+    <script>
+        // กำหนดปีปัจจุบันที่ Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // เอฟเฟกต์เวลาเลื่อนหน้าจอสำหรับ Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // ฟังก์ชันแอนิเมชันเปิดตัวเวลาเลื่อนหน้าจอ (Scroll Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // เรียกใช้ฟังก์ชันทันทีเพื่อแสดงส่วนแรก
+        reveal();
+
+        // ข้อมูลค็อกเทลในรูปแบบ JSON
+        const cocktailDataJSON = `
+        {
+            "cocktails": [
+                { "name": "Mojito", "image": "mojito.jpg" },
+                { "name": "Blue Hawaii", "image": "blue_hawaii.jpg" },
+                { "name": "Piña Colada", "image": "pina_colada.jpg" },
+                { "name": "Long Island Iced Tea", "image": "long_island.jpg" },
+                { "name": "Aperol Spritz", "image": "aperol_spritz.jpg" },
+                { "name": "Mai Tai", "image": "mai_tai.jpg" }
+            ]
+        }
+        `;
+
+        // สร้างและแสดงผลค็อกเทลบนหน้าเว็บ
+        const data = JSON.parse(cocktailDataJSON);
+        const cocktailGrid = document.getElementById('cocktail-grid');
+        let html = '';
+        
+        data.cocktails.forEach((drink, index) => {
+            let delayClass = index % 3 === 0 ? '' : index % 3 === 1 ? 'delay-100' : 'delay-200';
+            
+            html += `
+                <div class="bg-neutral-900 border border-neutral-800 rounded-sm overflow-hidden hover:border-amber-500 transition-colors duration-500 group reveal ${delayClass}">
+                    <div class="relative w-full flex bg-black items-center justify-center">
+                        <img src="${drink.image}" alt="${drink.name}" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105" />
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none"></div>
+                        
+                        <h3 class="absolute bottom-0 left-0 z-10 m-0 p-0 leading-none text-xl md:text-2xl font-bold text-white tracking-widest uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-amber-500 transition-colors duration-300 pointer-events-none">
+                            ${drink.name}
+                        </h3>
+                    </div>
+                </div>
+            `;
+        });
+        cocktailGrid.innerHTML = html;
+
+    </script>
+</body>
+</html>
+
+
+```
             <div class="flex items-center justify-center w-full">
                 <!-- เครื่องเล่นวิดีโอ HTML5 ปรับให้พอดีกับหน้าจอทั้งมือถือและคอม จำกัดความสูงไว้ที่ 70vh -->
                 <video 
