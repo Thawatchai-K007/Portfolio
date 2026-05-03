@@ -36,10 +36,10 @@
         }
     </style>
 </head>
-<body class="bg-neutral-950 text-neutral-200 antialiased">
+<body class="bg-neutral-950 text-neutral-200 antialiased relative">
 
     <!-- แถบนำทาง (Navbar) ปรับเป็น absolute ไม่เลื่อนตามเมาส์ -->
-    <nav id="navbar" class="absolute w-full z-50 bg-transparent py-6">
+    <nav id="navbar" class="absolute top-0 left-0 w-full z-50 bg-transparent py-6">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <span class="text-2xl font-bold tracking-widest text-amber-500 uppercase">TK.</span>
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
@@ -55,7 +55,7 @@
     <!-- หน้า 1: ปก (Cover Section) -->
     <section id="cover" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12">
         <div class="absolute inset-0 z-0">
-            <!-- ลบรูปที่ไม่โหลดออก ใส่พื้นหลังสีดำของธีม -->
+            <!-- ลบรูปที่ไม่โหลดออก ใช้พื้นหลังสีดำเนียนๆ ตามธีมเว็บ -->
             <div class="absolute inset-0 bg-neutral-950"></div>
         </div>
         
@@ -72,7 +72,7 @@
                 Professional Bartender
             </p>
             
-            <!-- ย่อหน้าแนะนำตัวมืออาชีพ -->
+            <!-- ย่อหน้าแนะนำตัวแบบมืออาชีพ -->
             <p class="max-w-3xl text-neutral-300 text-base md:text-lg leading-relaxed mb-12 font-light border-l-2 border-amber-500 pl-6 text-left md:text-center md:border-l-0 md:border-t-2 md:pt-6 md:pl-0">
                 I am a dedicated professional bartender currently crafting experiences at Wyndham Jomtien Pattaya. My journey in mixology began with my foundational role at Sea Bar, followed by an intensive internship at The Sanctuary Resort Pattaya, BW Signature Collection. Backed by formal training from the Department of Skill Development, I have developed a strong mastery of precise cocktail preparation, seamless bar operations, and exceptional guest service. I am deeply passionate about the art of mixology and committed to continuously elevating the drinking experience.
             </p>
@@ -91,6 +91,7 @@
                 </div>
             </div>
 
+            <!-- เปลี่ยนลิงก์กระโดดให้ไปที่ Roadmap -->
             <a href="#roadmap" class="animate-bounce p-2 rounded-full border border-neutral-700 hover:border-amber-500 hover:text-amber-500 transition-colors">
                 <!-- ไอคอนลูกศรชี้ลง -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
@@ -99,32 +100,20 @@
     </section>
 
     <!-- หน้า 2: Career Roadmap (Slider Section) -->
-    <section id="roadmap" class="py-24 md:py-32 bg-neutral-900 flex items-center border-t border-neutral-800">
+    <section id="roadmap" class="py-24 md:py-32 bg-neutral-900 border-t border-neutral-800">
         <div class="container mx-auto px-6 max-w-5xl text-center reveal">
             <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Career Roadmap</h2>
             
-            <!-- กรอบ Slider: ขนาดจะพอดีกับรูปภาพ 100% -->
+            <!-- กรอบ Slider: แก้บั๊กแล้ว ล็อคขนาดให้ 16:9 เท่ารูปภาพ (aspect-video) และป้องกันการยืด (items-start) -->
             <div class="relative w-full max-w-4xl mx-auto group mt-12">
                 
-                <div id="slider-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar border border-neutral-800 rounded-sm shadow-2xl bg-neutral-950 items-center">
-                    <div class="min-w-full flex-shrink-0 snap-center relative">
-                        <img src="career1.png" alt="Career Phase 1" class="w-full h-auto block">
-                    </div>
-                    <div class="min-w-full flex-shrink-0 snap-center relative">
-                        <img src="career2.png" alt="Career Phase 2" class="w-full h-auto block">
-                    </div>
-                    <div class="min-w-full flex-shrink-0 snap-center relative">
-                        <img src="career3.png" alt="Career Phase 3" class="w-full h-auto block">
-                    </div>
-                    <div class="min-w-full flex-shrink-0 snap-center relative">
-                        <img src="career4.png" alt="Career Phase 4" class="w-full h-auto block">
-                    </div>
-                    <div class="min-w-full flex-shrink-0 snap-center relative">
-                        <img src="career5.png" alt="Career Phase 5" class="w-full h-auto block">
-                    </div>
-                    <div class="min-w-full flex-shrink-0 snap-center relative">
-                        <img src="career6.png" alt="Career Phase 6" class="w-full h-auto block">
-                    </div>
+                <div id="slider-track" class="flex items-start overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar border border-neutral-800 rounded-sm shadow-2xl bg-neutral-950">
+                    <img src="career1.png" alt="Career Phase 1" class="w-full h-auto flex-shrink-0 snap-center aspect-video object-cover">
+                    <img src="career2.png" alt="Career Phase 2" class="w-full h-auto flex-shrink-0 snap-center aspect-video object-cover">
+                    <img src="career3.png" alt="Career Phase 3" class="w-full h-auto flex-shrink-0 snap-center aspect-video object-cover">
+                    <img src="career4.png" alt="Career Phase 4" class="w-full h-auto flex-shrink-0 snap-center aspect-video object-cover">
+                    <img src="career5.png" alt="Career Phase 5" class="w-full h-auto flex-shrink-0 snap-center aspect-video object-cover">
+                    <img src="career6.png" alt="Career Phase 6" class="w-full h-auto flex-shrink-0 snap-center aspect-video object-cover">
                 </div>
 
                 <button onclick="slideLeft()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/70 text-white p-3 rounded-full hover:bg-amber-500 hover:text-black transition-colors duration-300 border border-neutral-700 hover:border-amber-500 z-10 md:opacity-0 group-hover:opacity-100 hidden sm:block">
@@ -197,9 +186,9 @@
                     </div>
                 </div>
                 
-                <!-- ส่วนรูปภาพ Mockup เว็บไซต์ -->
+                <!-- ส่วนรูปภาพ Mockup เว็บไซต์ (ทำเป็น Grid 3 รูป เปลี่ยนเป็น .png) -->
                 <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-                    <!-- รูปที่ 1 -->
+                    <!-- รูปที่ 1 (ใหญ่สุด อยู่ด้านบน) -->
                     <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="col-span-2 relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
                         <img 
                             src="shot1.png" 
@@ -209,7 +198,7 @@
                         <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
                     </a>
                     
-                    <!-- รูปที่ 2 -->
+                    <!-- รูปที่ 2 (ซ้ายล่าง) -->
                     <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
                         <img 
                             src="shot2.png" 
@@ -219,7 +208,7 @@
                         <div class="absolute inset-0 border border-transparent group-hover:border-amber-500/50 transition-colors duration-500 pointer-events-none"></div>
                     </a>
 
-                    <!-- รูปที่ 3 -->
+                    <!-- รูปที่ 3 (ขวาล่าง) -->
                     <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
                         <img 
                             src="shot3.png" 
