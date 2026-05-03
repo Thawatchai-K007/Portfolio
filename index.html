@@ -38,8 +38,8 @@
 </head>
 <body class="bg-neutral-950 text-neutral-200 antialiased">
 
-    <!-- แถบนำทาง (Navbar) -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+    <!-- แถบนำทาง (Navbar) ปรับให้เป็น absolute เพื่อไม่ให้เลื่อนตามเมาส์ -->
+    <nav id="navbar" class="absolute w-full z-50 py-6">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <span class="text-2xl font-bold tracking-widest text-amber-500 uppercase">TK.</span>
             <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
@@ -55,13 +55,8 @@
     <!-- หน้า 1: ปก (Cover Section) -->
     <section id="cover" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12">
         <div class="absolute inset-0 z-0">
-            <!-- รูปภาพพื้นหลัง -->
-            <img 
-                src="https://images.unsplash.com/photo-1574096079513-d8259312b78a?auto=format&fit=crop&w=1920&q=80" 
-                alt="Bartender working" 
-                class="w-full h-full object-cover opacity-30"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/50 via-neutral-950/80 to-neutral-950"></div>
+            <!-- ลบรูปภาพที่ error ออก และใส่สีพื้นหลังเป็นสีดำของธีม -->
+            <div class="absolute inset-0 bg-neutral-950"></div>
         </div>
         
         <div class="relative z-10 text-center px-6 flex flex-col items-center reveal active">
@@ -77,7 +72,7 @@
                 Professional Bartender
             </p>
             
-            <!-- ย่อหน้าแนะนำตัว -->
+            <!-- ย่อหน้าแนะนำตัวที่อัปเดตเป็นมืออาชีพ -->
             <p class="max-w-3xl text-neutral-300 text-base md:text-lg leading-relaxed mb-12 font-light border-l-2 border-amber-500 pl-6 text-left md:text-center md:border-l-0 md:border-t-2 md:pt-6 md:pl-0">
                 I am a dedicated professional bartender currently crafting experiences at Wyndham Jomtien Pattaya. My journey in mixology began with my foundational role at Sea Bar, followed by an intensive internship at The Sanctuary Resort Pattaya, BW Signature Collection. Backed by formal training from the Department of Skill Development, I have developed a strong mastery of precise cocktail preparation, seamless bar operations, and exceptional guest service. I am deeply passionate about the art of mixology and committed to continuously elevating the drinking experience.
             </p>
@@ -87,11 +82,11 @@
                 <div class="relative p-2 bg-neutral-900 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer inline-block max-w-3xl w-full">
                     <img 
                         src="intro.jpg" 
-                        alt="Thawatchai working at the bar" 
+                        alt="Thawatchai at The Sanctuary Resort Pattaya" 
                         class="w-full h-auto rounded-sm transition-all duration-700" 
                     />
                     <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-max max-w-[90%] text-center bg-amber-500 text-neutral-950 text-xs md:text-sm font-bold uppercase tracking-widest py-2 px-6 shadow-lg group-hover:bg-amber-400 transition-colors duration-300">
-                        Crafting Cocktails at Work
+                        At The Sanctuary Resort Pattaya
                     </div>
                 </div>
             </div>
@@ -107,69 +102,45 @@
     <section id="roadmap" class="py-24 md:py-32 bg-neutral-900 min-h-[80vh] flex items-center border-t border-neutral-800">
         <div class="container mx-auto px-6 max-w-5xl text-center reveal">
             <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Career Roadmap</h2>
-            <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">My Professional Journey</p>
             
-            <!-- กรอบ Slider -->
-            <div class="relative w-full max-w-4xl mx-auto group">
+            <!-- กรอบ Slider แบบคลีน ไม่มีกรอบข้อความทับรูป -->
+            <div class="relative w-full max-w-4xl mx-auto group mt-12">
                 
-                <!-- Track สำหรับเลื่อนภาพ -->
-                <div id="slider-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar bg-black border border-neutral-800 rounded-sm shadow-2xl">
-                    
-                    <!-- รูปที่ 1 -->
+                <div id="slider-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl">
                     <div class="min-w-full flex-shrink-0 snap-center relative aspect-video flex items-center justify-center bg-neutral-950">
-                        <img src="career1.png" alt="Career Journey Phase 1" class="w-full h-full object-contain p-2">
+                        <img src="career1.png" alt="Career Phase 1" class="w-full h-full object-contain p-2">
                     </div>
-
-                    <!-- รูปที่ 2 -->
                     <div class="min-w-full flex-shrink-0 snap-center relative aspect-video flex items-center justify-center bg-neutral-950">
-                        <img src="career2.png" alt="Career Journey Phase 2" class="w-full h-full object-contain p-2">
+                        <img src="career2.png" alt="Career Phase 2" class="w-full h-full object-contain p-2">
                     </div>
-
-                    <!-- รูปที่ 3 -->
                     <div class="min-w-full flex-shrink-0 snap-center relative aspect-video flex items-center justify-center bg-neutral-950">
-                        <img src="career3.png" alt="Career Journey Phase 3" class="w-full h-full object-contain p-2">
+                        <img src="career3.png" alt="Career Phase 3" class="w-full h-full object-contain p-2">
                     </div>
-
-                    <!-- รูปที่ 4 -->
                     <div class="min-w-full flex-shrink-0 snap-center relative aspect-video flex items-center justify-center bg-neutral-950">
-                        <img src="career4.png" alt="Career Journey Phase 4" class="w-full h-full object-contain p-2">
+                        <img src="career4.png" alt="Career Phase 4" class="w-full h-full object-contain p-2">
                     </div>
-
-                    <!-- รูปที่ 5 -->
                     <div class="min-w-full flex-shrink-0 snap-center relative aspect-video flex items-center justify-center bg-neutral-950">
-                        <img src="career5.png" alt="Career Journey Phase 5" class="w-full h-full object-contain p-2">
+                        <img src="career5.png" alt="Career Phase 5" class="w-full h-full object-contain p-2">
                     </div>
-
-                    <!-- รูปที่ 6 -->
                     <div class="min-w-full flex-shrink-0 snap-center relative aspect-video flex items-center justify-center bg-neutral-950">
-                        <img src="career6.png" alt="Career Journey Phase 6" class="w-full h-full object-contain p-2">
+                        <img src="career6.png" alt="Career Phase 6" class="w-full h-full object-contain p-2">
                     </div>
-
                 </div>
 
-                <!-- ปุ่มเลื่อนซ้าย -->
                 <button onclick="slideLeft()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/70 text-white p-3 rounded-full hover:bg-amber-500 hover:text-black transition-colors duration-300 border border-neutral-700 hover:border-amber-500 z-10 md:opacity-0 group-hover:opacity-100 hidden sm:block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                 </button>
-
-                <!-- ปุ่มเลื่อนขวา -->
                 <button onclick="slideRight()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/70 text-white p-3 rounded-full hover:bg-amber-500 hover:text-black transition-colors duration-300 border border-neutral-700 hover:border-amber-500 z-10 md:opacity-0 group-hover:opacity-100 hidden sm:block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                 </button>
             </div>
-
-            <!-- ข้อความบอกผู้ใช้มือถือให้ปัด -->
-            <p class="text-neutral-500 text-xs mt-4 sm:hidden animate-pulse uppercase tracking-widest">Swipe to explore</p>
-
-            <!-- จุดไข่ปลาบอกตำแหน่ง (Dots) -->
-            <div class="flex justify-center mt-6 space-x-2" id="slider-dots">
-                <!-- Javascript จะสร้างจุดไข่ปลาตรงนี้ -->
-            </div>
+            
+            <div class="flex justify-center mt-6 space-x-2" id="slider-dots"></div>
         </div>
     </section>
 
     <!-- หน้า 3: วิดีโอ 1 (Video Section 1) -->
-    <section id="video" class="py-24 md:py-32 bg-neutral-950 min-h-[80vh] flex items-center border-t border-neutral-800">
+    <section id="video" class="py-24 md:py-32 bg-neutral-900 min-h-[80vh] flex items-center border-t border-neutral-800">
         <div class="container mx-auto px-6 max-w-5xl text-center reveal">
             <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Bartending at the Bar</h2>
             <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">Watch me in action</p>
@@ -188,7 +159,7 @@
     </section>
 
     <!-- หน้า 3.5: วิดีโอ 2 (Video Section 2) -->
-    <section id="video-wyndham" class="py-24 md:py-32 bg-neutral-900 min-h-[80vh] flex items-center border-y border-neutral-800">
+    <section id="video-wyndham" class="py-24 md:py-32 bg-neutral-950 min-h-[80vh] flex items-center border-y border-neutral-800">
         <div class="container mx-auto px-6 max-w-5xl text-center reveal">
             <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Bartending at Wyndham Jomtien Pattaya</h2>
             <p class="text-amber-500 mb-12 md:mb-16 tracking-widest text-sm uppercase">Professional Experience</p>
@@ -207,7 +178,7 @@
     </section>
 
     <!-- หน้า 3.75: โปรเจกต์ส่วนตัว (IBA Quiz Project) -->
-    <section id="iba-project" class="py-24 md:py-32 bg-neutral-950 border-b border-neutral-800">
+    <section id="iba-project" class="py-24 md:py-32 bg-neutral-900 border-b border-neutral-800">
         <div class="container mx-auto px-6 max-w-6xl reveal">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <!-- ส่วนข้อความอธิบาย -->
@@ -218,7 +189,7 @@
                         To ensure precision and mastery of international mixology standards, I developed an interactive web application dedicated to the 74 official international bartenders association cocktails. This project features a comprehensive quiz system designed to test and reinforce knowledge of exact ingredients, measurements, and preparation methods. It reflects my commitment to continuous learning and upholding the highest professional standards in bartending.
                     </p>
                     <!-- ข้อความลิงก์แทน (Text Link) -->
-                    <div class="mt-4 p-4 border border-neutral-800 bg-black/50 inline-block text-left w-full md:w-auto">
+                    <div class="mt-4 p-4 border border-neutral-800 bg-neutral-950/50 inline-block text-left w-full md:w-auto">
                         <span class="text-neutral-500 text-xs uppercase tracking-widest block mb-1">Project Link:</span>
                         <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 hover:underline underline-offset-4 transition-all duration-300 text-sm md:text-base break-all font-semibold">
                             https://ibacocktailsbygame.netlify.app/
@@ -229,7 +200,7 @@
                 <!-- ส่วนรูปภาพ Mockup เว็บไซต์ (ทำเป็น Grid 3 รูป เปลี่ยนเป็น .png) -->
                 <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
                     <!-- รูปที่ 1 (ใหญ่สุด อยู่ด้านบน) -->
-                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="col-span-2 relative p-1 bg-black border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="col-span-2 relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
                         <img 
                             src="shot1.png" 
                             alt="IBA Quiz Screenshot 1" 
@@ -239,7 +210,7 @@
                     </a>
                     
                     <!-- รูปที่ 2 (ซ้ายล่าง) -->
-                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-black border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
                         <img 
                             src="shot2.png" 
                             alt="IBA Quiz Screenshot 2" 
@@ -249,7 +220,7 @@
                     </a>
 
                     <!-- รูปที่ 3 (ขวาล่าง) -->
-                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-black border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
+                    <a href="https://ibacocktailsbygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="relative p-1 bg-neutral-950 border border-neutral-800 rounded-sm shadow-2xl group cursor-pointer block overflow-hidden">
                         <img 
                             src="shot3.png" 
                             alt="IBA Quiz Screenshot 3" 
@@ -263,7 +234,7 @@
     </section>
 
     <!-- หน้า 4: ค็อกเทล (Cocktails) -->
-    <section id="cocktails" class="py-32 bg-neutral-900">
+    <section id="cocktails" class="py-32 bg-neutral-950">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="flex flex-col items-center mb-20 reveal">
                 <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-[0.2em] text-white mb-4">Sample Cocktails I Have Prepared</h2>
@@ -287,18 +258,6 @@
         // กำหนดปีปัจจุบันที่ Footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // เอฟเฟกต์เวลาเลื่อนหน้าจอสำหรับ Navbar
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
-                navbar.classList.remove('bg-transparent', 'py-6');
-            } else {
-                navbar.classList.remove('bg-neutral-950/95', 'backdrop-blur-lg', 'shadow-xl', 'py-4');
-                navbar.classList.add('bg-transparent', 'py-6');
-            }
-        });
-
         // ฟังก์ชันแอนิเมชันเปิดตัวเวลาเลื่อนหน้าจอ (Scroll Reveal)
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
@@ -312,14 +271,14 @@
             }
         }
         window.addEventListener("scroll", reveal);
+        // เรียกใช้ฟังก์ชันทันทีเพื่อแสดงส่วนแรก
         reveal();
 
-        // ===== ระบบ Slider (Roadmap) =====
+        // ===== ระบบ Slider (Roadmap) แบบจุดไข่ปลา =====
         const sliderTrack = document.getElementById('slider-track');
-        const slidesCount = 6; // จำนวนรูปทั้งหมด
+        const slidesCount = 6; 
         const dotsContainer = document.getElementById('slider-dots');
 
-        // สร้างจุดไข่ปลา
         for(let i=0; i<slidesCount; i++) {
             const dot = document.createElement('div');
             dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? 'bg-amber-500 w-4' : 'bg-neutral-700'}`;
@@ -327,7 +286,6 @@
         }
         const dots = dotsContainer.children;
 
-        // อัปเดตจุดไข่ปลาเมื่อเลื่อน
         sliderTrack.addEventListener('scroll', () => {
             const scrollRatio = sliderTrack.scrollLeft / sliderTrack.clientWidth;
             const currentIndex = Math.round(scrollRatio);
@@ -343,14 +301,12 @@
             }
         });
 
-        // ฟังก์ชันกดปุ่มเลื่อนซ้าย-ขวา
         function slideLeft() {
             sliderTrack.scrollBy({ left: -sliderTrack.clientWidth, behavior: 'smooth' });
         }
         function slideRight() {
             sliderTrack.scrollBy({ left: sliderTrack.clientWidth, behavior: 'smooth' });
         }
-
 
         // ข้อมูลค็อกเทลในรูปแบบ JSON
         const cocktailDataJSON = `
@@ -393,3 +349,6 @@
     </script>
 </body>
 </html>
+
+
+```
